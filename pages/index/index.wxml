@@ -1,0 +1,19 @@
+<view>
+  
+  <view class="list" wx:for="{{articles}}" wx:key="unique" wx:for-item="article">
+    <view class="item-header">
+      <image src="{{article.author.avatar_url}}"/>
+      <text>{{article.author.loginname}}</text>
+    </view>
+
+    <view class="item.content" bindtap="detail" data-id="{{article.id}}">
+      <text>{{article.title}}</text>
+    </view>
+
+    <view class="item-footer">
+      <view>{{article.visit_count}}人看过</view>
+      <view>{{article.reply_count}}条回复</view>
+    </view>
+  </view>
+
+</view>
